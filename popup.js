@@ -35,6 +35,25 @@ function search(nameKey, newArr){
 }
 
 
+for (var i=0; i < newArr.length; i++) {
+    newArr[i].country = newArr[i].country.split("- ");
+}
+
+
+for (var i=0; i < newArr.length; i++) {
+    newArr[i].country = newArr[i].country[i];
+}
+
+
+for (var i=0; i < newArr.length; i++) {
+    if(newArr[i].country[1] == undefined){
+        newArr[i].country = newArr[i].country[0];
+        console.log(newArr[i].country[0]);
+    }else{
+    newArr[i].country = newArr[i].country[1];
+    }
+}
+
 var resultObject = search("TH - Thailand", newArr);
 
 function search(nameKey, newArr, lang){
