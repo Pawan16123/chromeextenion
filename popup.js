@@ -36,3 +36,14 @@ function search(nameKey, newArr){
 
 
 var resultObject = search("TH - Thailand", newArr);
+
+function search(nameKey, newArr, lang){
+    for (var i=0; i < newArr.length; i++) {
+        if (newArr[i].country == nameKey && newArr[i].language == lang) {
+            return newArr[i];
+        }
+    }
+}
+
+
+var resultObject = search("SL - Slovenia", newArr,"Slovenian");
